@@ -1,0 +1,17 @@
+package main
+
+import (
+ "encoding/json"
+ "net/http"
+ "time"
+)
+
+type TimeResponse struct {
+ Now string `json:"now"`
+}
+
+func TimeHandler(w http.ResponseWriter, r *http.Request) {
+ response := TimeResponse{Now: time.Now().Format(time.RFC3339)}
+ w.Header().Set("Content-Type", "application/json")
+ json.NewEncoder(w).Encode(response)
+}
