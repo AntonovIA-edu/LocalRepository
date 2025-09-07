@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	fmt.Println("Инициализация запуска сервера")
 	http.HandleFunc("/", HomeHandler)
 	http.HandleFunc("/about", AboutHandler)
 
