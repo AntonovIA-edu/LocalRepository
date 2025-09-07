@@ -17,4 +17,5 @@ func main() {
 	if err != nil {
 		fmt.Println("Ошибка запуска сервера:", err)
 	}
+	fmt.Println("Сервер завершил свою работу.")
 }
