@@ -7,6 +7,6 @@ func GetMessage(page string) string {
 	case "about":
 		return "Это простое приложение на Go из трёх файлов."
 	default:
-		return "Страница не найдена."
+		return "Страница не найдена. Попробуйте другую страницу."
 	}
 }
