@@ -8,6 +8,7 @@ import (
 func main() {
 	http.HandleFunc("/", HomeHandler)
 	http.HandleFunc("/about", AboutHandler)
+	http.HandleFunc("/api/random", RandomHandler)
 	http.HandleFunc("/api/time", TimeHandler)
 
 	fmt.Println("Сервер запущен на http://localhost:8080")
@@ -15,4 +16,5 @@ func main() {
 	if err != nil {
 		fmt.Println("Ошибка запуска сервера:", err)
 	}
+	fmt.Println("Сервер завершил свою работу.")
 }
